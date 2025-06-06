@@ -1,0 +1,22 @@
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 5vw;
+}
+
+#logo {
+  width: 15%;
+  height: auto;
+}
+
+.cont-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+main {
+  padding: 0 5vw;
+} */
