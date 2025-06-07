@@ -1,15 +1,52 @@
 
-export default function Dropdown() {
-    return(
+export default function Dropdown({name}) {
+    const languages = [
+        { code: 'en', name: 'English' },
+        { code: 'es', name: 'Spanish' },
+        { code: 'fr', name: 'French' },
+        { code: 'de', name: 'German' },
+        { code: 'it', name: 'Italian' },
+        { code: 'zh', name: 'Chinese' },
+        { code: 'hi', name: 'Hindi' }
+    ];
 
-            <select name="language" id="langDrop" className="appearance-none bg-black text-white font-bold text-base rounded-md px-[1vw] py-[1vh] border border-white" >
-                <option value="en" defaultValue>English</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-                <option value="de">German</option>
-                <option value="it">Italian</option>
-                <option value="zh">Chinese</option>
-                <option value="hi">Hindi</option>
+    const login = [ "Login", "Sign Up"
+    ]
+    const logout = [ "Log Out", "Sign Out"
+    ]
+
+    // className="appearance-none bg-black text-white font-bold text-base rounded-md px-[1vw] py-[1vh] border border-white"
+    if (name === "language") {
+        return (
+            <select className="appearance-none bg-black text-white font-bold text-base rounded-md px-[1vw] py-[1vh] border border-white">
+                {languages.map((lang) => (
+                    <option key={lang.code} value={lang.code}>
+                        {lang.name}
+                    </option>
+                ))}
             </select>
-    )
+        );
+    }
+    if (name === "login") {
+        return (
+            <select className="appearance-none bg-black text-white font-bold text-base rounded-md px-[1vw] py-[1vh] border border-white">
+                {login.map((item, index) => (
+                    <option key={index} value={item}>
+                        {item}
+                    </option>
+                ))}
+            </select>
+        );
+    }
+    if (name === "logout") {
+        return (
+            <select className="appearance-none bg-black text-white font-bold text-base rounded-md px-[1vw] py-[1vh] border border-white">
+                {logout.map((item, index) => (
+                    <option key={index} value={item}>
+                        {item}
+                    </option>
+                ))}
+            </select>
+        );
+    }
 }
